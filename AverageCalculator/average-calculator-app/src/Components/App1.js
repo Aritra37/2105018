@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function App() {
+function App1() {
   const [numberId, setNumberId] = useState('');
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default App1;
