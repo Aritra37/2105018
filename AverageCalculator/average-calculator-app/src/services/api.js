@@ -1,7 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-const API_URL = 'http://localhost:5000'; // Assuming your backend server is running locally
-
+const API_URL = 'http://localhost:9876';
 const api = axios.create({
   baseURL: API_URL,
   headers: {
@@ -19,6 +18,6 @@ const fetchNumbers = async (numberId) => {
   }
 };
 
-export default {
+module.exports = {
   fetchNumbers,
 };
