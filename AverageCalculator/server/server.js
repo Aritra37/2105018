@@ -10,8 +10,9 @@ app.use(bodyParser.json());
 let storedNumbers = [];
 const WINDOW_SIZE = 10;
 
+// Fetch numbers from the third-party server
 async function fetchNumbers(numberId) {
-    const url = ``;
+    const url = `https://api.testserver.com/${numberId}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -36,6 +37,7 @@ function calculateAverage(numbers) {
     return sum / numbers.length;
 }
 
+// Endpoint to handle requests for fetching numbers
 app.get('/numbers/:numberId', async (req, res) => {
     const numberId = req.params.numberId;
     if (!['p', 'f', 'e', 'r'].includes(numberId)) {
